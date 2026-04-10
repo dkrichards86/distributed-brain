@@ -69,7 +69,7 @@ Numbers are only meaningful in context. A 10x speedup matters if the code is in 
 2. Does the improvement fit within resource constraints (memory, CPU)?
 3. Does the benchmark reflect realistic data — distribution, size, access patterns?
 
-For interpreting system-level performance measurements, see [[Metrics and Percentiles]].
+For interpreting system-level performance measurements, see [Metrics and Percentiles](../Observability/Metrics%20and%20Percentiles.md).
 
 ### Common pitfalls
 

@@ -67,6 +67,6 @@ Most applications use write-through or write-around depending on whether consist
 
 - **Control vs. simplicity** — cache-aside gives fine-grained control at the cost of cache logic spread across the application; read-through is simpler but delegates decisions to the cache layer
 - **Consistency** — write-through is consistent; write-back is fast but risks loss; invalidation on write is simple but creates a miss on the next read
-- **Race conditions** — cache-aside has a window between miss and populate where duplicate work happens; [[Request Coalescing]] (singleflight) solves this
+- **Race conditions** — cache-aside has a window between miss and populate where duplicate work happens ([Cache Stampede](Cache%20Stampede.md)); [Request Coalescing](Request%20Coalescing.md) (singleflight) solves this within a process; [Jitter](Jitter.md) on TTLs prevents synchronized expirations
 - **Warming vs. eviction** — pre-warming a large cache can evict entries that users were actually hitting; warming requires knowing your access patterns
 

@@ -35,7 +35,7 @@ A single `ERROR` per hour gets attention. A hundred `ERROR`s per hour get ignore
 
 ### Aggregation window
 
-Short windows for alerting on severity spikes; longer windows for trend analysis. Scanning through `TRACE`/`DEBUG` logs is only practical when targeting a specific investigation. For request-path visibility across services, see [[Distributed Tracing]].
+Short windows for alerting on severity spikes; longer windows for trend analysis. Scanning through `TRACE`/`DEBUG` logs is only practical when targeting a specific investigation. For request-path visibility across services, see [Distributed Tracing](Distributed%20Tracing.md).
 
 ## Key tradeoffs
 

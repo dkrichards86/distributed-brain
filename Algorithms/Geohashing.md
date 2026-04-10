@@ -26,4 +26,4 @@ Precision scales with string length:
 
 ## Related concepts
 
-- [[Linear Referencing]] — an alternative location encoding for positions along a fixed route, using scalar distance rather than a grid hash
+- [Linear Referencing](Linear%20Referencing.md) — an alternative location encoding for positions along a fixed route, using scalar distance rather than a grid hash

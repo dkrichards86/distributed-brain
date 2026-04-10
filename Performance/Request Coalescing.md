@@ -4,7 +4,7 @@ A technique that consolidates concurrent duplicate requests for the same resourc
 
 ## Why it matters
 
-When a popular cache entry expires under high traffic, dozens or hundreds of concurrent requests can simultaneously encounter the miss and each independently trigger an expensive backend operation. This is [[Caching Strategies|cache stampede]] — redundant work that spikes database connections, degrades latency, and requires you to provision for worst-case stampede loads rather than actual traffic. Request coalescing eliminates the redundant work at the source.
+When a popular cache entry expires under high traffic, dozens or hundreds of concurrent requests can simultaneously encounter the miss and each independently trigger an expensive backend operation. This is a [Cache Stampede](Cache%20Stampede.md) — a form of [Thundering Herd](Thundering%20Herd.md) — redundant work that spikes database connections, degrades latency, and requires you to provision for worst-case stampede loads rather than actual traffic. Request coalescing eliminates the redundant work at the source.
 
 ## How it works
 

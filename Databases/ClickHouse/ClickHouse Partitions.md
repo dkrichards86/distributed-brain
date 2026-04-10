@@ -1,10 +1,10 @@
 # ClickHouse Partitions
 
-Logical groupings of data within a [[ClickHouse Architecture|ClickHouse]] table — typically by time period — that enable partition pruning (skipping entire groups of parts at query time) and independent data lifecycle management.
+Logical groupings of data within a [ClickHouse](ClickHouse%20Architecture.md) table — typically by time period — that enable partition pruning (skipping entire groups of parts at query time) and independent data lifecycle management.
 
 ## Why it matters
 
-Partitions are the coarsest-grained filter in ClickHouse's query execution pipeline. A query with a partition-key predicate eliminates whole [[ClickHouse Parts|parts]] before the primary index is even consulted. For time-series workloads, good partitioning can reduce the data scanned by orders of magnitude. Partitions also make TTL expiry and manual data drops cheap — dropping a partition is an instant metadata operation, not a row-level delete.
+Partitions are the coarsest-grained filter in ClickHouse's query execution pipeline. A query with a partition-key predicate eliminates whole [parts](ClickHouse%20Parts.md) before the primary index is even consulted. For time-series workloads, good partitioning can reduce the data scanned by orders of magnitude. Partitions also make TTL expiry and manual data drops cheap — dropping a partition is an instant metadata operation, not a row-level delete.
 
 ## How it works
 
@@ -20,7 +20,7 @@ PARTITION BY toYYYYMM(timestamp)
 ORDER BY (tenant_id, timestamp);
 ```
 
-The `PARTITION BY` expression is evaluated for each row at insert time. Rows with the same partition key value are stored in the same partition. All [[ClickHouse Parts|parts]] within a partition share its key.
+The `PARTITION BY` expression is evaluated for each row at insert time. Rows with the same partition key value are stored in the same partition. All [parts](ClickHouse%20Parts.md) within a partition share its key.
 
 ### Partition pruning at query time
 

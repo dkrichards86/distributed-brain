@@ -84,7 +84,7 @@ Deliberate denormalization is often justified for read performance, reporting ta
 
 ## Key tradeoffs
 
-- **Normalization vs. query performance** — more normal forms = fewer anomalies, but more [[SQL Joins]] needed at query time; heavily normalized schemas can be slow for read-heavy workloads
+- **Normalization vs. query performance** — more normal forms = fewer anomalies, but more [SQL Joins](SQL%20Joins.md) needed at query time; heavily normalized schemas can be slow for read-heavy workloads
 - **Update simplicity vs. read simplicity** — normalization makes writes clean (one fact in one place) but reads complex (joins everywhere)
 - **Intentional denormalization** — analytics tables, materialized views, and read replicas often store denormalized data for performance; the key is knowing when you're denormalizing on purpose vs. by accident
 - **Maintenance burden** — violating 2NF or 3NF means updating one fact in multiple rows; in large tables this is error-prone and slow

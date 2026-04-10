@@ -29,5 +29,5 @@ Create a bit array of size `n` (initially all zeros) and choose `k` independent 
 - **No retrieval** — you can only test membership, not retrieve the stored item.
 
 ## Related concepts
-- [[ClickHouse Indexing Strategies]]
+- [ClickHouse Indexing Strategies](../Databases/ClickHouse/ClickHouse%20Indexing%20Strategies.md)
 

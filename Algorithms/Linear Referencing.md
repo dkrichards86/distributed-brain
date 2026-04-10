@@ -23,4 +23,4 @@ The geometry of the route itself is stored separately. The linear reference valu
 
 ## Related concepts
 
-- [[Geohashing]] — encodes lat/lon into a grid-based string for proximity queries; a general-purpose alternative to route-specific linear references
+- [Geohashing](Geohashing.md) — encodes lat/lon into a grid-based string for proximity queries; a general-purpose alternative to route-specific linear references

@@ -1,6 +1,6 @@
 # ClickHouse Architecture
 
-A [[Columnar Databases|column-oriented]] analytical database that achieves high query performance by storing data per-column, using immutable writes, and organizing data in a partition → part → granule hierarchy.
+A [column-oriented](../Columnar%20Databases.md) analytical database that achieves high query performance by storing data per-column, using immutable writes, and organizing data in a partition → part → granule hierarchy.
 
 ## Why it matters
 
@@ -22,7 +22,7 @@ This enables high write throughput (no locking or coordination) but makes freque
 
 ### The hierarchy: Partitions → Parts → Granules
 
-Data is organized into [[ClickHouse Partitions]] (logical time-based groupings) → [[ClickHouse Parts]] (physical storage units created per INSERT, consolidated by background merging) → [[ClickHouse Granules]] (the minimal 8,192-row selectable unit that the primary index points into).
+Data is organized into [ClickHouse Partitions](ClickHouse%20Partitions.md) (logical time-based groupings) → [ClickHouse Parts](ClickHouse%20Parts.md) (physical storage units created per INSERT, consolidated by background merging) → [ClickHouse Granules](ClickHouse%20Granules.md) (the minimal 8,192-row selectable unit that the primary index points into).
 
 ### Primary keys work differently
 
@@ -49,4 +49,8 @@ Column order matters significantly. Put the most selective filter column first. 
 - **Part count vs. query latency** — more parts = more scan overhead per query; tuning insert batch size directly impacts query performance
 - **Partition granularity** — finer partitions (daily) allow better pruning for time-range queries but increase partition count overhead; coarser partitions (monthly) reduce overhead but require scanning more data
 - **Primary key column order** — binary search only applies to the first column; getting this wrong means paying linear costs on high-cardinality filters
+
+## Related concepts
+
+- [LSM Trees](../LSM%20Trees.md) — ClickHouse's MergeTree shares LSM concepts (immutable writes, background merging, deferred deletes) but is column-oriented and skips the in-memory MemTable buffer; Parts are the SSTable analog
 

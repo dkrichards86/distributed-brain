@@ -1,16 +1,16 @@
 # ClickHouse Indexing Strategies
 
-[[ClickHouse Architecture|ClickHouse]] provides three complementary indexing mechanisms — primary key, partition pruning, and data-skipping indexes — that work together to eliminate granules and parts from scans rather than enabling O(1) row lookups.
+[ClickHouse](ClickHouse%20Architecture.md) provides three complementary indexing mechanisms — primary key, partition pruning, and data-skipping indexes — that work together to eliminate granules and parts from scans rather than enabling O(1) row lookups.
 
 ## Why it matters
 
-ClickHouse has no traditional [[B-Trees|B-tree]] row-level index. Instead it reduces I/O by skipping entire blocks of data. Knowing which indexing mechanisms exist, how they interact, and when each applies is the difference between a query that scans 100 granules and one that scans 10,000.
+ClickHouse has no traditional [B-tree](../B-Trees.md) row-level index. Instead it reduces I/O by skipping entire blocks of data. Knowing which indexing mechanisms exist, how they interact, and when each applies is the difference between a query that scans 100 granules and one that scans 10,000.
 
 ## How it works
 
 ### Primary key index (sparse index)
 
-The primary key determines sort order on disk. ClickHouse writes one index mark per [[ClickHouse Granules|granule]] (8,192 rows by default), not per row — this is sparse indexing. The full index fits in memory.
+The primary key determines sort order on disk. ClickHouse writes one index mark per [granule](ClickHouse%20Granules.md) (8,192 rows by default), not per row — this is sparse indexing. The full index fits in memory.
 
 **Query execution:** ClickHouse binary-searches the index to find candidate granule ranges, then scans only those granules. Rows outside the range are never read.
 
@@ -26,7 +26,7 @@ The primary key determines sort order on disk. ClickHouse writes one index mark 
 
 ### Partition pruning
 
-[[ClickHouse Partitions|Partitions]] are a coarser filter applied before the primary index. A query with a partition key predicate skips entire [[ClickHouse Parts|parts]] without consulting the primary index at all.
+[Partitions](ClickHouse%20Partitions.md) are a coarser filter applied before the primary index. A query with a partition key predicate skips entire [parts](ClickHouse%20Parts.md) without consulting the primary index at all.
 
 - Partition by time period (`toYYYYMM(timestamp)`) is the most common pattern
 - Effective only when queries consistently filter on the partition column
@@ -60,7 +60,7 @@ ALTER TABLE events MATERIALIZE INDEX idx_user_id;
 
 **When skipping indexes help:** when the indexed column has high correlation within granules — meaning matching values tend to cluster together on disk. If a user's events are spread randomly across all granules, a bloom filter index on `user_id` will show the value as present in nearly every block and skip nothing. Pre-sorting data by the target column (in primary key or a materialized view) dramatically improves skip effectiveness.
 
-See [[Bloom Filters]]
+See [Bloom Filters](../../Algorithms/Bloom%20Filters.md)
 
 ### Projections
 

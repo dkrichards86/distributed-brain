@@ -18,7 +18,7 @@ SLI = good requests / total requests
 
 Not a raw count or average — a proportion. This normalizes for traffic volume: twice the errors at twice the traffic might still mean the same error rate.
 
-Good SLIs measure things users actually experience: proportion of requests returning non-5xx responses, proportion completing under 500ms (see [[Metrics and Percentiles]]), proportion of background jobs finishing within their window.
+Good SLIs measure things users actually experience: proportion of requests returning non-5xx responses, proportion completing under 500ms (see [Metrics and Percentiles](Metrics%20and%20Percentiles.md)), proportion of background jobs finishing within their window.
 
 ### SLO — the target
 

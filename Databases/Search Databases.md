@@ -8,7 +8,7 @@ SQL `LIKE` queries and exact-match indexes don't handle the messy reality of tex
 
 ## How it works
 
-At index time, text fields are analyzed — tokenized into terms, lowercased, stemmed (e.g. "running" → "run"), and stored in an inverted index mapping term → list of document IDs. At query time, the query is similarly analyzed, matched against the inverted index, and documents are scored by relevance (TF-IDF or BM25). [[Text Similarity Measures|Fuzzy matching]], boosting, and faceted filters are layered on top.
+At index time, text fields are analyzed — tokenized into terms, lowercased, stemmed (e.g. "running" → "run"), and stored in an inverted index mapping term → list of document IDs. At query time, the query is similarly analyzed, matched against the inverted index, and documents are scored by relevance (TF-IDF or BM25). [Fuzzy matching](../Algorithms/Text%20Similarity%20Measures.md), boosting, and faceted filters are layered on top.
 
 ## Key tradeoffs
 

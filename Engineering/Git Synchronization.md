@@ -4,7 +4,7 @@ How Git moves commits between repositories — copying objects and updating refe
 
 ## Why it matters
 
-Push failures, rebase warnings, and merge conflicts all make sense once you understand that Git repositories are independent [[Git Internals|object databases]] that occasionally synchronize. The rules governing what's safe to push, when rebase rewrites history, and why merge conflicts happen all follow directly from the underlying model.
+Push failures, rebase warnings, and merge conflicts all make sense once you understand that Git repositories are independent [object databases](Git%20Internals.md) that occasionally synchronize. The rules governing what's safe to push, when rebase rewrites history, and why merge conflicts happen all follow directly from the underlying model.
 
 ## How it works
 

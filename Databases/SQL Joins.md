@@ -4,7 +4,7 @@ SQL operations that combine rows from two or more tables based on a related colu
 
 ## Why it matters
 
-[[SQL Normalization|Normalized]] relational data is spread across multiple tables by design. Joins are the primary mechanism for reuniting related data at query time without denormalizing the schema.
+[Normalized](./SQL%20Normalization.md) relational data is spread across multiple tables by design. Joins are the primary mechanism for reuniting related data at query time without denormalizing the schema.
 
 ## How it works
 
@@ -68,17 +68,17 @@ Use when: intentionally generating all combinations. Rarely used in practice; ac
 
 ### Quick reference
 
-| Join type | Returns |
-|---|---|
-| INNER | Only matched rows from both tables |
-| LEFT OUTER | All rows from left + matched rows from right |
+| Join type   | Returns                                      |
+| ----------- | -------------------------------------------- |
+| INNER       | Only matched rows from both tables           |
+| LEFT OUTER  | All rows from left + matched rows from right |
 | RIGHT OUTER | All rows from right + matched rows from left |
-| FULL OUTER | All rows from both, matched or not |
-| CROSS | All combinations (Cartesian product) |
+| FULL OUTER  | All rows from both, matched or not           |
+| CROSS       | All combinations (Cartesian product)         |
 
 ## Key tradeoffs
 
 - **INNER vs. OUTER** — INNER is typically more efficient because it produces fewer rows; OUTER joins require materializing the full left/right table even when most rows have no match
 - **Join order** — query planners generally pick optimal join order, but on complex queries with many joins, explicit ordering or hints can matter
 - **Null handling** — OUTER join NULLs in WHERE clauses require `IS NULL` not `= NULL`; this trips up queries that filter on outer-join columns
-- **Normalization cost** — the more [[SQL Normalization|normalized]] the schema, the more joins queries need; heavily normalized schemas trade storage efficiency for query complexity
+- **Normalization cost** — the more [normalized](SQL%20Normalization.md) the schema, the more joins queries need; heavily normalized schemas trade storage efficiency for query complexity

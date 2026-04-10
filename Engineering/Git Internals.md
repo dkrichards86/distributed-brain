@@ -52,7 +52,7 @@ The old commit is untouched — it's still in the object database.
 
 ## Key tradeoffs
 
-- **Immutability** — objects are never modified in place; "rewriting history" ([[Git Synchronization|rebase]], amend) creates new objects and updates references, leaving orphaned old objects until GC
+- **Immutability** — objects are never modified in place; "rewriting history" ([rebase](Git%20Synchronization.md), amend) creates new objects and updates references, leaving orphaned old objects until GC
 - **Content addressing** — perfect deduplication and integrity, but you can never look up a file by name across the object database directly
 - **Cheap branches** — branches are just pointers, so they're free to create and fast to switch; this encourages short-lived feature branches and experimentation
 - **Detached HEAD** — powerful for exploring history, but commits made in detached HEAD state are orphaned when you switch back unless you create a branch

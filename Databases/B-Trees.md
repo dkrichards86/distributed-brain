@@ -55,8 +55,8 @@ Multiple readers can traverse the tree simultaneously. Writers lock individual n
 
 ## Related concepts
 
-- [[Relational Databases]] — the primary use case for B-trees; virtually every relational database uses B+ trees for indexes
-- [[ClickHouse Indexing Strategies]] — ClickHouse deliberately avoids B-tree row-level indexes in favor of sparse indexing and granule skipping
+- [Relational Databases](Relational%20Databases.md) — the primary use case for B-trees; virtually every relational database uses B+ trees for indexes
+- [ClickHouse Indexing Strategies](ClickHouse/ClickHouse%20Indexing%20Strategies.md) — ClickHouse deliberately avoids B-tree row-level indexes in favor of sparse indexing and granule skipping
 
 ## My context
 
@@ -64,4 +64,4 @@ Multiple readers can traverse the tree simultaneously. Writers lock individual n
 
 - How do SSDs change the B-tree optimization equation — are page-aligned reads still the right abstraction when random reads are fast?
 - What's the actual fill factor databases use for B-tree nodes, and how does it affect insert performance on append-heavy workloads?
-- How do LSM trees (used by Cassandra, RocksDB) compare to B-trees for write-heavy workloads?
+- How do [LSM trees](LSM%20Trees.md) (used by Cassandra, RocksDB) compare to B-trees for write-heavy workloads?

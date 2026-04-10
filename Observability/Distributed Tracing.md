@@ -4,7 +4,7 @@ A technique for following a single request's path through a distributed system, 
 
 ## Why it matters
 
-[[Metrics and Percentiles|Metrics]] tell you *that* something is slow. [[Log Levels|Logs]] tell you what happened at individual moments. Tracing tells you *where* time was spent and how operations relate to each other. In a distributed system, a single user-facing request may touch a dozen services — tracing is the only tool that shows the full picture.
+[Metrics](Metrics%20and%20Percentiles.md) tell you *that* something is slow. [Logs](Log%20Levels.md) tell you what happened at individual moments. Tracing tells you *where* time was spent and how operations relate to each other. In a distributed system, a single user-facing request may touch a dozen services — tracing is the only tool that shows the full picture.
 
 ## How it works
 
@@ -45,7 +45,7 @@ Tracing every request at high traffic is expensive in CPU and storage. Most syst
 - Cascading failures — traces show the dependency chain and distinguish root cause from symptoms
 - Complex async workflows where a request spawns background jobs across services
 - Debugging issues that only affect specific users or entity types (filter traces by attribute)
-- Diagnosing which services are burning your [[SLOs and Error Budgets|error budget]]
+- Diagnosing which services are burning your [error budget](SLOs%20and%20Error%20Budgets.md)
 
 ### Compared to logs
 

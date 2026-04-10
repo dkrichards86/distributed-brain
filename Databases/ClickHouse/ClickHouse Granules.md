@@ -1,6 +1,6 @@
 # ClickHouse Granules
 
-The minimal selectable unit of data in [[ClickHouse Architecture|ClickHouse]] — a fixed block of consecutive rows (8,192 by default) that the primary index points into rather than indexing individual rows.
+The minimal selectable unit of data in [ClickHouse](ClickHouse%20Architecture.md) — a fixed block of consecutive rows (8,192 by default) that the primary index points into rather than indexing individual rows.
 
 ## Why it matters
 
@@ -8,7 +8,7 @@ Granules define the floor on how much data ClickHouse reads. Even a query matchi
 
 ## How it works
 
-Each [[ClickHouse Parts|part]] is divided into consecutive granules of `index_granularity` rows (default 8,192). ClickHouse stores one **index mark** per granule: the mark records the byte offset into the column files where that granule starts, plus the values of the primary key columns for the first row in the granule.
+Each [part](ClickHouse%20Parts.md) is divided into consecutive granules of `index_granularity` rows (default 8,192). ClickHouse stores one **index mark** per granule: the mark records the byte offset into the column files where that granule starts, plus the values of the primary key columns for the first row in the granule.
 
 **Query execution:**
 1. ClickHouse binary-searches the primary index marks to find the range of granules whose key range could contain matching rows.
@@ -19,7 +19,7 @@ Granules that fall entirely outside the primary key range are skipped without an
 
 **Adaptive granularity:** ClickHouse also supports `index_granularity_bytes` (default 10 MB). When enabled, granule boundaries are placed at whichever comes first — 8,192 rows or 10 MB of data. This prevents very wide rows from producing enormous granules.
 
-**[[ClickHouse Indexing Strategies|Data-skipping indexes]] operate at granule-block granularity:** secondary indexes summarize a configurable number of granules (the `GRANULARITY` parameter on the index definition). They are evaluated after the primary index has already eliminated granule ranges.
+**[Data-skipping indexes](ClickHouse%20Indexing%20Strategies.md) operate at granule-block granularity:** secondary indexes summarize a configurable number of granules (the `GRANULARITY` parameter on the index definition). They are evaluated after the primary index has already eliminated granule ranges.
 
 ## Key tradeoffs
 

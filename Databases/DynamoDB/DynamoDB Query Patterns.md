@@ -25,17 +25,17 @@ DynamoDB routes items to partitions via a **partition key (PK)**. An optional **
 | **Sparse GSI** | Attribute only present on some items; GSI only indexes those items — acts as a filtered view |
 | **Write sharding** | Append random suffix to hot PK (`USER#123#3`) to spread writes across partitions; fan-out on read |
 
-See [[DynamoDB Operation Semantics]]
+See [DynamoDB Operation Semantics](DynamoDB%20Operation%20Semantics.md)
 
 **Secondary indexes:**
-See [[DynamoDB Indexes]]
+See [DynamoDB Indexes](DynamoDB%20Indexes.md)
 
 ## Key tradeoffs
 
 - **Denormalization vs. storage cost** — single-table design duplicates data to serve multiple access patterns; storage is cheap but updates must touch multiple items
 - **GSI cost** — each GSI replicates data and has its own write capacity; more indexes = higher cost
 - **Sparse GSI efficiency** — great for filtered queries, but you lose items that don't have the attribute (intentional or accidental)
-- **Write sharding complexity** — solves [[DynamoDB Hot Partitions|hot partition]] throttling but requires scatter-gather reads (query all shards, merge results)
+- **Write sharding complexity** — solves [hot partition](DynamoDB%20Hot%20Partitions.md) throttling but requires scatter-gather reads (query all shards, merge results)
 - **No ad hoc queries** — any unplanned access pattern requires a new index or a full scan; scan is expensive and slow
 
 **Hard limits:** 400KB per item, 1MB per query response, 10GB per partition key value.

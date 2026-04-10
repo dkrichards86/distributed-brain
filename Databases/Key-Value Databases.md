@@ -8,7 +8,7 @@ When access patterns are predictable and speed matters more than queryability, k
 
 ## How it works
 
-Each entry is a (key, value) pair. The database makes no assumptions about value structure. Access is via exact key lookup, range scans on ordered keys, or atomic operations (increment, compare-and-swap). Data is often stored in memory (Redis) or on SSD with LSM trees ([[DynamoDB Query Patterns|DynamoDB]]). Partitioning by key hash makes horizontal scaling straightforward.
+Each entry is a (key, value) pair. The database makes no assumptions about value structure. Access is via exact key lookup, range scans on ordered keys, or atomic operations (increment, compare-and-swap). Data is often stored in memory (Redis) or on SSD with [LSM trees](LSM%20Trees.md) ([DynamoDB](DynamoDB/DynamoDB%20Query%20Patterns.md)). Partitioning by key hash makes horizontal scaling straightforward.
 
 ## Key tradeoffs
 

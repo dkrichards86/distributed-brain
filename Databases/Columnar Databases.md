@@ -14,4 +14,4 @@ Instead of storing row1(col1, col2, col3), row2(col1, col2, col3)... data is sto
 
 - Slow for individual record lookups — fetching a single row requires reading from many column files
 - Poor fit for transactional or frequently-updated data — in-place updates are expensive; most columnar stores are append-oriented
-- **Examples:** [[ClickHouse Architecture|ClickHouse]]
+- **Examples:** [ClickHouse](ClickHouse/ClickHouse%20Architecture.md)

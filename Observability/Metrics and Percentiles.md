@@ -54,5 +54,5 @@ Good metrics correlate with outcomes: response time → conversion and retention
 
 - **Short windows vs. noise** — catching problems fast vs. paging on-call for transient spikes
 - **Average vs. percentile** — averages are intuitive but masked by outliers; percentiles are more complex but more honest about user experience
-- **P90 vs. P99 for [[SLOs and Error Budgets|SLAs]]** — P90 is stable and actionable; P99 is more representative of real worst-case experience but harder to hold as a firm target
+- **P90 vs. P99 for [SLAs](SLOs%20and%20Error%20Budgets.md)** — P90 is stable and actionable; P99 is more representative of real worst-case experience but harder to hold as a firm target
 - **More metrics vs. cognitive load** — collecting everything is easy; knowing which metrics to watch during an incident requires deliberate curation

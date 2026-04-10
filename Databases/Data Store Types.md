@@ -10,43 +10,43 @@ No single data store is best at everything. Choosing the wrong one means trading
 
 ### Relational databases
 
-See [[Relational Databases]]
+See [Relational Databases](Relational%20Databases.md)
 
 ---
 
 ### Document databases
 
-See [[Document Databases]]
+See [Document Databases](Document%20Databases.md)
 
 ---
 
 ### Key-value databases
 
-See [[Key-Value Databases]]
+See [Key-Value Databases](Key-Value%20Databases.md)
 
 ---
 
 ### Columnar databases
 
-See [[Columnar Databases]]
+See [Columnar Databases](Columnar%20Databases.md)
 
 ---
 
 ### Search databases
 
-See [[Search Databases]]
+See [Search Databases](Search%20Databases.md)
 
 ---
 
 ### Analytical databases (data warehouses)
 
-See [[Analytical Databases]]
+See [Analytical Databases](Analytical%20Databases.md)
 
 ---
 
 ### Object / blob storage
 
-See [[Object Storage]]
+See [Object Storage](Object%20Storage.md)
 
 ---
 

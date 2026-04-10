@@ -38,7 +38,7 @@ The terms describe a specific pair-wise relationship, not an absolute position.
 
 **Blast radius analysis:** Before making a change to a service, identify its downstream consumers — those are the services at risk. Before investigating a problem, identify the upstream dependencies — those are the potential root causes.
 
-**SLA planning:** Your service's [[SLOs and Error Budgets|SLA]] is bounded by its upstream dependencies. If `Auth Service` has 99.9% availability and every request requires an auth check, your service can't offer better than 99.9%.
+**SLA planning:** Your service's [SLA](../Observability/SLOs%20and%20Error%20Budgets.md) is bounded by its upstream dependencies. If `Auth Service` has 99.9% availability and every request requires an auth check, your service can't offer better than 99.9%.
 
 ### The team disagreement problem
 

@@ -1,10 +1,6 @@
 # Second Brain — Distributed Systems
 
-An Obsidian vault for building up working knowledge of distributed systems concepts.
-
-## Requirements
-
-Requires [Obsidian](https://obsidian.md) to be installed. Open this directory as a vault from the Obsidian app.
+A personal knowledge base for distributed systems concepts. Notes are plain markdown and can be read in any editor. Compatible with [Obsidian](https://obsidian.md) — open this directory as a vault if you want the graph view and navigation features — but Obsidian is not required.
 
 ## Directories
 
@@ -14,7 +10,7 @@ Requires [Obsidian](https://obsidian.md) to be installed. Open this directory as
 | `Databases/` | General database internals and concepts — storage engines, indexing, SQL, schema design |
 | `Databases/ClickHouse/` | ClickHouse-specific architecture, indexing, and storage internals |
 | `Databases/DynamoDB/` | DynamoDB-specific patterns, operations, and internals |
-| `Engineering/` | Software engineering practices and runtime concepts — git, async models, auth, design principles |
+| `Engineering/` | Software engineering practices and runtime concepts — git, async models, auth, design principles, load management |
 | `Observability/` | Logging, metrics, tracing, and reliability — the tools for understanding running systems |
 | `Performance/` | Optimization patterns — caching, coalescing, benchmarking |
 

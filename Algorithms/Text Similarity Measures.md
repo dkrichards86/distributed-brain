@@ -42,7 +42,7 @@ Treats texts as sets of tokens. `|intersection| / |union|` of their word sets.
 **Cosine similarity**
 Represents documents as term-frequency vectors; measures the angle between them. Normalized for document length, so a short paragraph and a long essay can be similar if they emphasize the same terms.
 
-- Best for: [[Search Databases|document search]] and recommendation — the workhorse for most text retrieval systems
+- Best for: [document search](../Databases/Search%20Databases.md) and recommendation — the workhorse for most text retrieval systems
 - Weakness: bag-of-words model ignores word order; "car" and "automobile" treated as completely different
 
 ---

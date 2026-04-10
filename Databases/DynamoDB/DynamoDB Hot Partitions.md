@@ -33,7 +33,7 @@ Each item is placed on a partition by hashing its partition key. The hash functi
 | UUID partition keys | Natural randomness | Lose meaningful ordering |
 | Hash prefixes | Prepend a hash of the key | Preserves identifier, adds noise |
 | Composite prefixes | `user_id + activity_type` | Splits one entity across partitions |
-| Write sharding | Append random suffix (`key_0`–`key_9`) | Reads must scatter-gather across shards — see [[DynamoDB Query Patterns]] |
+| Write sharding | Append random suffix (`key_0`–`key_9`) | Reads must scatter-gather across shards — see [DynamoDB Query Patterns](DynamoDB%20Query%20Patterns.md) |
 
 **Detection:** Table-level CloudWatch metrics can show healthy utilization while a single partition is overwhelmed. `ThrottleEvents` despite low overall utilization = suspect hot partitions. DynamoDB **Contributor Insights** shows which partition keys receive the most traffic.
 

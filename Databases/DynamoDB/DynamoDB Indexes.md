@@ -54,7 +54,7 @@ Both index types require a projection — which attributes are copied into the i
 | **Include** | Keys + specific named attributes | Sweet spot; include what your queries need, skip the rest |
 | **All** | Every attribute | Most expensive; queries never need a base table fetch |
 
-If a query needs an attribute not in the projection, DynamoDB transparently fetches it from the base table (a hidden [[DynamoDB Operation Semantics|GetItem]]) — but this adds latency and consumes base table read capacity. Design projections to avoid this on hot paths.
+If a query needs an attribute not in the projection, DynamoDB transparently fetches it from the base table (a hidden [GetItem](DynamoDB%20Operation%20Semantics.md)) — but this adds latency and consumes base table read capacity. Design projections to avoid this on hot paths.
 
 ---
 
@@ -62,7 +62,7 @@ If a query needs an attribute not in the projection, DynamoDB transparently fetc
 
 If an item doesn't have the GSI's partition or sort key attribute, it's excluded from the index entirely. This creates a filtered view without a separate table.
 
-Example: a table of all orders where 10% are flagged for review. Set a `needs_review` attribute only on flagged orders and use it as the GSI partition key. The GSI contains only the 10% of items you care about — cheaper to query and smaller to store. See [[DynamoDB Query Patterns]] for how sparse GSIs fit into single-table design.
+Example: a table of all orders where 10% are flagged for review. Set a `needs_review` attribute only on flagged orders and use it as the GSI partition key. The GSI contains only the 10% of items you care about — cheaper to query and smaller to store. See [DynamoDB Query Patterns](DynamoDB%20Query%20Patterns.md) for how sparse GSIs fit into single-table design.
 
 ---
 

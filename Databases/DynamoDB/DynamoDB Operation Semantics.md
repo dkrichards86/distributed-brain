@@ -22,7 +22,7 @@ Choosing the wrong operation costs money, causes throttling, or silently corrupt
 
 **Scan** reads every item sequentially across all partitions. Useful for backfills, migrations, and analytics on small tables. On large tables it's slow, expensive, and can consume your full provisioned throughput. Parallel scan (divide table into segments, scan concurrently) speeds it up but doesn't reduce cost.
 
-**Consistency options** (GetItem and Query):
+**Consistency options** (GetItem and Query) — see [Consistency Models](../Consistency%20Models.md):
 - `ConsistentRead: false` (default) — eventually consistent, half the read capacity cost
 - `ConsistentRead: true` — strongly consistent, full read capacity cost; not available on GSIs
 
@@ -72,5 +72,5 @@ Choosing the wrong operation costs money, causes throttling, or silently corrupt
 
 - **PutItem simplicity vs. safety** — PutItem is easier to reason about but dangerous under concurrent writes; UpdateItem is safer but requires learning expression syntax
 - **Batch cost vs. atomicity** — BatchWriteItem is cheap and fast but not atomic; TransactWriteItems is atomic but 2x cost and stricter limits
-- **FilterExpression illusion** — looks like server-side filtering but you pay for all items read before the filter; for high-cardinality filtering, a [[DynamoDB Indexes|GSI]] is almost always better
+- **FilterExpression illusion** — looks like server-side filtering but you pay for all items read before the filter; for high-cardinality filtering, a [GSI](DynamoDB%20Indexes.md) is almost always better
 - **Scan throughput impact** — a full scan on a provisioned table can consume 100% of read capacity and starve real traffic; use `--page-size` and throttle with `ReturnConsumedCapacity`
