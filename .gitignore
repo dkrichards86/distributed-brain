@@ -1,0 +1,10 @@
+# Obsidian workspace state (changes constantly, not useful to sync)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+
+# Obsidian trash
+.trash/
+
+# macOS
+.DS_Store
