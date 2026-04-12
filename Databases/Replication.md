@@ -63,3 +63,7 @@ Used by Cassandra, DynamoDB (internally), and Riak. Excellent availability but r
 - [Consistency Models](Consistency%20Models.md) — replication lag is the source of consistency problems; the consistency model determines how the system handles it
 - [Consistent Hashing](../Algorithms/Consistent%20Hashing.md) — used in leaderless systems to determine which nodes own which keys
 - [DynamoDB Hot Partitions](DynamoDB/DynamoDB%20Hot%20Partitions.md) — DynamoDB uses leaderless replication internally; partitioning and replication interact
+- [Consensus Algorithms](../Distributed%20Systems/Consensus%20Algorithms.md) — consensus-based replication (Raft, Paxos) is how strongly consistent databases guarantee no data loss on leader failure
+- [Leader Election](../Distributed%20Systems/Leader%20Election.md) — leader-follower replication requires leader election on failover; the new leader must have all committed entries
+- [CRDTs](CRDTs.md) — used in multi-leader replication to merge concurrent writes from different leaders without coordination
+- [Partitioning and Sharding](Partitioning%20and%20Sharding.md) — each shard is independently replicated; partitioning and replication are configured together

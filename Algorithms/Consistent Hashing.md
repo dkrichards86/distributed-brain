@@ -47,3 +47,5 @@ To replicate each key to `N` nodes, assign it to the first `N` nodes clockwise f
 - [DynamoDB Hot Partitions](../Databases/DynamoDB/DynamoDB%20Hot%20Partitions.md) — consistent hashing distributes keys but skewed access patterns still create hot nodes
 - [Bloom Filters](Bloom%20Filters.md) — another probabilistic structure used alongside consistent hashing in distributed systems to reduce unnecessary lookups
 - [Replication](../Databases/Replication.md) — consistent hashing is commonly extended with replication factors to assign each key to multiple nodes
+- [Partitioning and Sharding](../Databases/Partitioning%20and%20Sharding.md) — consistent hashing is one of several partitioning strategies; the note covers the full landscape including range and directory-based approaches
+- [Gossip Protocols](../Distributed%20Systems/Gossip%20Protocols.md) — gossip propagates ring membership changes in consistent hashing-based systems like Cassandra

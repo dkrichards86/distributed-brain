@@ -76,3 +76,7 @@ An extension of CAP for the non-partition case: even when the network is healthy
 - [Replication](Replication.md) — the mechanism that creates the consistency problem; replicas diverge during replication lag
 - [MVCC](MVCC.md) — how single-node databases achieve read isolation without sacrificing write throughput
 - [DynamoDB Operation Semantics](DynamoDB/DynamoDB%20Operation%20Semantics.md) — DynamoDB's `ConsistentRead` flag exposes the CP/AP tradeoff directly
+- [CAP Theorem](../Distributed%20Systems/CAP%20Theorem.md) — CAP's "C" is specifically linearizability; the strongest point on the consistency spectrum
+- [PACELC](../Distributed%20Systems/PACELC.md) — extends CAP to the non-partition case: the everyday latency/consistency dial
+- [Logical Clocks](../Distributed%20Systems/Logical%20Clocks.md) — causal consistency is tracked using vector clocks; the clock mechanism is what makes causal ordering enforceable
+- [CRDTs](CRDTs.md) — CRDTs implement eventual consistency by construction; the data structure guarantees convergence without coordination

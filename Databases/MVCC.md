@@ -1,4 +1,4 @@
-# MVCC
+# MVCC (Multi-Version Concurrency Control)
 
 A concurrency control technique where writes create new versions of rows rather than overwriting them in place, allowing readers and writers to operate simultaneously without blocking each other.
 

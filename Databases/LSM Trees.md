@@ -1,4 +1,4 @@
-# LSM Trees
+# LSM Trees (Log-Structured Merge-Trees)
 
 A write-optimized storage structure that batches writes in memory and flushes them to immutable sorted files on disk, merging those files in the background.
 

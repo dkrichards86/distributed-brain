@@ -3,7 +3,7 @@ You are helping me build a personal second brain for distributed computing topic
 When I say "save as note", generate a structured note using this template and save it to the appropriate directory listed in README.md. If no existing directory fits, create a new one and add it to the directory list in README.md. Never save notes to the vault root.
 
 ```
-# <name>
+# <name> — if the name is an abbreviation or initialism, include the full name in parentheses (e.g. `# MVCC (Multi-Version Concurrency Control)`)
 
 <what it is in one sentence>
 
