@@ -51,3 +51,4 @@ In multi-zone or multi-region deployments, routing to the nearest healthy backen
 - [Service Mesh](Service%20Mesh.md) — the sidecar proxy implements L7 load balancing per-route, including locality awareness and P2C, without application code changes
 - [Failure Detection](../Fault%20Tolerance/Failure%20Detection.md) — load balancer health checks are a form of failure detection; the same accuracy/latency tradeoff applies
 - [Rate Limiting](../Engineering/Rate%20Limiting.md) — load balancing distributes traffic across backends; rate limiting caps total traffic entering the system; they're complementary
+- [Service Discovery](Service%20Discovery.md) — service discovery provides the pool of healthy endpoints that the load balancer selects from; the two concerns are usually co-located in a proxy like Envoy

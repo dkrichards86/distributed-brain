@@ -53,3 +53,4 @@ SWIM's key insight: detection work is spread across all nodes (no central monito
 - [Consensus Algorithms](../Distributed%20Systems/Consensus%20Algorithms.md) — Raft's election timeout is a simple heartbeat-based failure detector; when a follower stops hearing from the leader, it starts an election
 - [Gossip Protocols](../Distributed%20Systems/Gossip%20Protocols.md) — SWIM uses gossip for disseminating failure suspicions across the cluster
 - [Circuit Breaker](Circuit%20Breaker.md) — failure detection at the service-call level; the breaker opens when a downstream looks like it's failing, rather than waiting for node-level detection
+- [Service Discovery](../Architecture/Service%20Discovery.md) — service registries use health checks to detect failed instances and remove them from the endpoint pool; the same detection latency tradeoffs apply

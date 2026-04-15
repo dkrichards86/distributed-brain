@@ -50,3 +50,4 @@ Key responsibilities:
 - [Bulkhead](../Fault%20Tolerance/Bulkhead.md) — service meshes enforce connection limits and concurrency caps at the proxy level, implementing bulkhead semantics without application changes
 - [Failure Detection](../Fault%20Tolerance/Failure%20Detection.md) — the service mesh proxy detects failing upstreams and opens circuit breakers; it's failure detection at the call level
 - [Distributed Tracing](../Observability/Distributed%20Tracing.md) — service meshes generate trace spans for every service-to-service call; tracing headers must still be propagated by the application
+- [Service Discovery](Service%20Discovery.md) — the service mesh control plane is a service discovery system; it resolves service names to endpoint lists and pushes them to sidecar proxies via xDS

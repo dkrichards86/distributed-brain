@@ -38,3 +38,4 @@ Nodes periodically synchronize their full state with a random peer to repair div
 - [Failure Detection](../Fault%20Tolerance/Failure%20Detection.md) — the SWIM protocol uses gossip to disseminate failure suspicions; gossip is the dissemination layer, phi accrual is the detection layer
 - [Consensus Algorithms](Consensus%20Algorithms.md) — gossip handles membership and soft state; consensus handles hard decisions (who is leader, is this transaction committed)
 - [Consistent Hashing](../Algorithms/Consistent%20Hashing.md) — gossip propagates ring membership changes in consistent hashing-based systems like Cassandra
+- [Service Discovery](../Architecture/Service%20Discovery.md) — Consul uses gossip (via Serf) to propagate node join/leave/failure events across the registry cluster itself
