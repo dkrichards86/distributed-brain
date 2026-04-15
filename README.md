@@ -16,7 +16,8 @@ A personal knowledge base for distributed systems concepts. Notes are plain mark
 | `Distributed Systems/` | Distributed systems theory and protocols — consensus, leader election, distributed transactions, time and ordering |
 | `Messaging/` | Messaging and streaming patterns — pub-sub, delivery semantics, backpressure |
 | `Fault Tolerance/` | Failure patterns and resilience techniques — failure detection, circuit breakers, chaos engineering |
-| `Architecture/` | Deployment and architectural patterns — sidecar, service mesh |
+| `Architecture/` | Deployment and architectural patterns — sidecar, service mesh, service discovery |
+| `Serialization & RPC/` | Serialization formats and RPC frameworks — Protocol Buffers, gRPC, Avro, Parquet, Thrift, Arrow, ORC, MessagePack |
 
 When adding a new note, place it in the most fitting directory above. If no directory fits, create a new one and add it to this table.
 

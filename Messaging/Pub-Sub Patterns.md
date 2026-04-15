@@ -48,3 +48,4 @@ Brokers make different ordering guarantees:
 
 - [Delivery Semantics](Delivery%20Semantics.md) — the guarantee the broker makes about how many times a message is delivered; consumers must design for the weakest guarantee the broker provides
 - [Backpressure](Backpressure.md) — what happens when consumers are slower than producers; critical for preventing broker saturation
+- [Avro](../Serialization%20%26%20RPC/Avro.md) — the dominant serialization format for Kafka messages; the schema registry ties schema lifecycle to topic lifecycle and enforces compatibility between producers and consumers

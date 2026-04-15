@@ -15,3 +15,9 @@ Instead of storing row1(col1, col2, col3), row2(col1, col2, col3)... data is sto
 - Slow for individual record lookups — fetching a single row requires reading from many column files
 - Poor fit for transactional or frequently-updated data — in-place updates are expensive; most columnar stores are append-oriented
 - **Examples:** [ClickHouse](ClickHouse/ClickHouse%20Architecture.md)
+
+## Related concepts
+
+- [Parquet](../Serialization%20%26%20RPC/Parquet.md) — a columnar file format for data lakes; applies the same column-per-file principle to portable storage on object stores
+- [ORC](../Serialization%20%26%20RPC/ORC.md) — another columnar file format from the Hive ecosystem; similar to Parquet with tighter Hive ACID integration
+- [Apache Arrow](../Serialization%20%26%20RPC/Apache%20Arrow.md) — a columnar in-memory format; the in-process complement to Parquet on disk; many columnar databases use Arrow as their internal representation
