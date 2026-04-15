@@ -45,6 +45,7 @@ Reduces coordination overhead but requires clock bounds — the leader must rele
 
 ## Related concepts
 
+- [Raft](Raft.md) — Raft's term-based election mechanism is the canonical example; the full algorithm shows why the log up-to-date check is essential for safety
 - [Consensus Algorithms](Consensus%20Algorithms.md) — Raft and Zab embed leader election; the election protocol is inseparable from log replication safety
 - [Failure Detection](../Fault%20Tolerance/Failure%20Detection.md) — election is triggered by failure detection; the accuracy of failure detection determines how quickly re-election happens and how often false elections fire
 - [Replication](../Databases/Replication.md) — leader-follower replication requires leader election on failover; the new leader must have all committed log entries

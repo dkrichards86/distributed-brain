@@ -54,6 +54,7 @@ All three provide:
 
 ## Related concepts
 
+- [Raft](Raft.md) — deep-dive on Raft specifically: terms, log replication, the election restriction, snapshots, and membership changes
 - [Leader Election](Leader%20Election.md) — Raft and Zab embed leader election; it's also used independently for coordination
 - [Distributed Transactions](Distributed%20Transactions.md) — 2PC uses a coordinator that requires consensus-like agreement; Paxos/Raft can replace 2PC's coordinator
 - [Replication](../Databases/Replication.md) — consensus-based replication is the foundation of strongly consistent distributed databases
