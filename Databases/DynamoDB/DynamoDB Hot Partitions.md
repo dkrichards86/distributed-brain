@@ -43,6 +43,6 @@ Partitions are never deleted or merged once created — traffic spikes permanent
 
 - **Distribution vs. queryability** — UUID keys distribute perfectly but prevent range queries; grouping related items on the same partition enables efficient scans but risks hot spots for power users
 - **Write sharding cost** — solves hot write partitions but requires scatter-gather on reads (query all shards, merge results)
-- **On-demand billing** — absorbs hot partition traffic better than provisioned capacity since it autoscales; higher per-request cost but no risk of under-provisioning
+- **On-demand billing** — absorbs hot partition traffic better than provisioned capacity since it autoscales; higher per-request cost but no risk of under-provisioning; see [DynamoDB Capacity Modes](DynamoDB%20Capacity%20Modes.md)
 - **Load testing realism** — uniform random test traffic won't surface hot partitions from skewed production patterns; test with realistic access distributions
 

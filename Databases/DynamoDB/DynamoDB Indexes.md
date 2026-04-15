@@ -81,6 +81,7 @@ Every write to the base table that touches an indexed attribute triggers a write
 ## Key tradeoffs
 
 - **LSI immutability** — strong consistency and no extra capacity cost, but you're locked in at creation; an unplanned access pattern means no LSI option
+- **GSI autoscaling** — GSI capacity must be autoscaled independently of the base table; forgetting this is a common cause of GSI throttling; see [DynamoDB Autoscaling](DynamoDB%20Autoscaling.md) and [DynamoDB Capacity Modes](DynamoDB%20Capacity%20Modes.md)
 - **GSI eventual consistency** — maximum flexibility and can be added anytime, but you can't do strongly consistent reads; a brief replication lag exists after every write
 - **Projection size vs. query cost** — larger projections increase storage and write costs but eliminate base table fetches on reads; smaller projections save money at rest but add latency on non-projected attribute access
 - **Index count vs. write cost** — more indexes = more access patterns supported, but write amplification grows linearly; every index has to pay its way

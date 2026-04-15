@@ -74,3 +74,4 @@ Choosing the wrong operation costs money, causes throttling, or silently corrupt
 - **Batch cost vs. atomicity** — BatchWriteItem is cheap and fast but not atomic; TransactWriteItems is atomic but 2x cost and stricter limits
 - **FilterExpression illusion** — looks like server-side filtering but you pay for all items read before the filter; for high-cardinality filtering, a [GSI](DynamoDB%20Indexes.md) is almost always better
 - **Scan throughput impact** — a full scan on a provisioned table can consume 100% of read capacity and starve real traffic; use `--page-size` and throttle with `ReturnConsumedCapacity`
+- **Capacity mode matters** — the RCU/WCU costs above apply in both modes; see [DynamoDB Capacity Modes](DynamoDB%20Capacity%20Modes.md) for how provisioned vs. on-demand affects throttling behavior
