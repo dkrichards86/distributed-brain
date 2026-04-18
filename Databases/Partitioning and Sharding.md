@@ -63,3 +63,5 @@ Secondary indexes complicate partitioning because an index entry and the documen
 - [Replication](Replication.md) — each partition is typically replicated across multiple nodes for fault tolerance; partitioning and replication are configured together
 - [Distributed Transactions](../Distributed%20Systems/Distributed%20Transactions.md) — transactions that touch multiple partitions require distributed coordination
 - [DynamoDB Hot Partitions](DynamoDB/DynamoDB%20Hot%20Partitions.md) — a real-world example of hot partition problems under hash-based partitioning
+- [UUID](../Distributed%20Systems/UUID.md) — v4 UUIDs distribute writes uniformly across hash partitions; v7 and Snowflake IDs trade that property for time-sortability
+- [Snowflake ID](../Distributed%20Systems/Snowflake%20ID.md) — time-prefixed IDs can create sequential write hot spots in range-partitioned systems

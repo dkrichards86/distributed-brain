@@ -16,3 +16,7 @@ Each record is a self-contained document (typically JSON or BSON). Documents are
 - Referential integrity is your problem — the database won't enforce foreign-key-style constraints
 - ACID guarantees vary by implementation and version; multi-document transactions are often limited or expensive
 - **Examples:** MongoDB
+
+## Related concepts
+
+- [ObjectID](../Distributed%20Systems/ObjectID.md) — MongoDB's native `_id` format; a 12-byte timestamp + random + counter ID generated client-side by the driver

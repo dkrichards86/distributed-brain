@@ -48,3 +48,5 @@ Combines a physical timestamp with a logical counter. Stays close to wall time (
 - [Consensus Algorithms](Consensus%20Algorithms.md) — consensus establishes a total order on events, stronger than what Lamport timestamps alone provide
 - [CRDTs](../Databases/CRDTs.md) — CRDTs use causal tracking (often version vectors) to merge concurrent writes without coordination
 - [Distributed Transactions](Distributed%20Transactions.md) — ordering events across nodes is the core problem distributed transactions must solve
+- [Snowflake ID](Snowflake%20ID.md) — embeds a physical millisecond timestamp; vulnerable to clock skew in a way logical clocks are not
+- [UUID](UUID.md) — v7 UUIDs use a physical timestamp prefix for sortability, trading causal guarantees for practical ordering
