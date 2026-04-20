@@ -37,4 +37,4 @@ Variants are used by Discord (with a different epoch and worker bit split), Inst
 - [UUID](UUID.md) — 128-bit alternative; v7 UUIDs borrow Snowflake's time-prefix idea but sacrifice compactness
 - [ObjectID](ObjectID.md) — MongoDB's 96-bit format; similar concept but second-level timestamp precision and no worker capacity limit
 - [Logical Clocks](Logical%20Clocks.md) — Snowflake embeds a physical timestamp; hybrid logical clocks solve the clock-skew problem more rigorously
-- [Partitioning and Sharding](../Databases/Partitioning%20and%20Sharding.md) — Snowflake IDs written in time order cause sequential writes to hit the same hash bucket or range partition; may need key salting to spread load
+- [Sharding](../Databases/Sharding.md) — Snowflake IDs written in time order cause sequential writes to hit the same hash bucket or range shard; may need key salting to spread load

@@ -52,6 +52,6 @@ Sagas are **not atomic** in the traditional sense — other transactions can obs
 
 - [Consensus Algorithms](Consensus%20Algorithms.md) — a consensus-backed coordinator eliminates 2PC's blocking problem; Spanner and CockroachDB use Paxos/Raft for this
 - [CAP Theorem](CAP%20Theorem.md) — 2PC is CP: it sacrifices availability (blocks) to maintain consistency
-- [Partitioning and Sharding](../Databases/Partitioning%20and%20Sharding.md) — distributed transactions become necessary when data is sharded across nodes
+- [Sharding](../Databases/Sharding.md) — distributed transactions become necessary when data is sharded across nodes
 - [Logical Clocks](Logical%20Clocks.md) — ordering events across transaction participants is a core requirement; Spanner uses physical clock bounds; others use logical timestamps
 - [Delivery Semantics](../Messaging/Delivery%20Semantics.md) — exactly-once message processing is related; sagas in message-driven systems rely on idempotent handlers and at-least-once delivery

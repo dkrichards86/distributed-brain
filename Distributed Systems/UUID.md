@@ -21,11 +21,11 @@ The "universally unique" claim relies on randomness: the probability of a v4 col
 - **v4 randomness vs. index locality** — random UUIDs scatter writes across a B-tree index, causing page splits and poor cache behavior; v7 solves this by prefixing with a sortable timestamp
 - **Size** — 128 bits (16 bytes) vs. 64-bit alternatives like [Snowflake IDs](Snowflake%20ID.md); matters at scale when stored as a primary key across billions of rows
 - **No coordination needed** — but also no global ordering guarantee; you can't determine which UUID was generated first unless using v7
-- **Hot partition avoidance** — v4's randomness distributes keys uniformly across hash partitions (see [Partitioning and Sharding](../Databases/Partitioning%20and%20Sharding.md)), but means range scans are useless
+- **Hot partition avoidance** — v4's randomness distributes keys uniformly across hash shards (see [Sharding](../Databases/Sharding.md)), but means range scans are useless
 
 ## Related concepts
 
 - [Snowflake ID](Snowflake%20ID.md) — a compact 64-bit time-sortable alternative with embedded machine identity
 - [ObjectID](ObjectID.md) — MongoDB's 96-bit ID format, also timestamp-prefixed
-- [Partitioning and Sharding](../Databases/Partitioning%20and%20Sharding.md) — ID format directly affects whether writes hot-spot on a single partition
+- [Sharding](../Databases/Sharding.md) — ID format directly affects whether writes hot-spot on a single shard
 - [Logical Clocks](Logical%20Clocks.md) — v7 UUIDs use physical timestamps in the high bits, trading true causal ordering for practical sortability
