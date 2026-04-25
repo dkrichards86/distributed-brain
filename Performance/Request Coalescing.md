@@ -53,3 +53,9 @@ Coalescing is local (per process), coordination-free, and degrades gracefully �
 - **Latency tail** — all coalesced requests experience the full rebuild latency, not just the one that triggered it; there's no way to serve a fast cached response while rebuilding
 - **Memory pressure** — waiting requests accumulate in memory; under extreme load, many keys coalescing simultaneously increases heap usage
 - **Scope** — `singleflight` is per-process; if you have 10 instances, each can independently trigger the same upstream query; distributed coalescing requires coordination (e.g., Redis locks)
+
+## Related
+
+- [Goroutines](../Engineering/Goroutines.md) — `singleflight` uses goroutine parking on channels to hold waiters without busy-waiting
+- [Cache Stampede](Cache%20Stampede.md) — the problem coalescing solves
+- [Thundering Herd](Thundering%20Herd.md) — the broader failure pattern

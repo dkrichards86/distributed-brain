@@ -67,3 +67,5 @@ Used by Cassandra, DynamoDB (internally), and Riak. Excellent availability but r
 - [Leader Election](../Distributed%20Systems/Leader%20Election.md) — leader-follower replication requires leader election on failover; the new leader must have all committed entries
 - [CRDTs](CRDTs.md) — used in multi-leader replication to merge concurrent writes from different leaders without coordination
 - [Sharding](Sharding.md) — each shard is independently replicated; sharding and replication are configured together
+- [Quorum](../Distributed%20Systems/Quorum.md) — leaderless replication uses quorum reads and writes (W + R > N) to guarantee that acknowledged writes are visible to subsequent reads
+- [Horizontal and Vertical Scaling](../Architecture/Horizontal%20and%20Vertical%20Scaling.md) — read replicas are how databases scale reads horizontally; write scaling requires sharding

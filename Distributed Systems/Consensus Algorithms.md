@@ -61,3 +61,5 @@ All three provide:
 - [CAP Theorem](CAP%20Theorem.md) — consensus algorithms implement the CP side of CAP; they sacrifice availability during partitions to maintain consistency
 - [Failure Detection](../Fault%20Tolerance/Failure%20Detection.md) — consensus algorithms depend on failure detection to trigger leader re-election
 - [Gossip Protocols](Gossip%20Protocols.md) — gossip is often used alongside consensus for cluster membership propagation
+- [Quorum](Quorum.md) — the quorum (majority) is the core mechanism all consensus algorithms use to make decisions; a value is chosen when a quorum agrees
+- [Distributed Lock](Distributed%20Lock.md) — distributed locks are implemented on top of consensus systems (etcd, Consul) to guarantee mutual exclusion

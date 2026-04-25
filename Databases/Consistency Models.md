@@ -80,3 +80,4 @@ An extension of CAP for the non-partition case: even when the network is healthy
 - [PACELC](../Distributed%20Systems/PACELC.md) — extends CAP to the non-partition case: the everyday latency/consistency dial
 - [Logical Clocks](../Distributed%20Systems/Logical%20Clocks.md) — causal consistency is tracked using vector clocks; the clock mechanism is what makes causal ordering enforceable
 - [CRDTs](CRDTs.md) — CRDTs implement eventual consistency by construction; the data structure guarantees convergence without coordination
+- [CQRS](../Architecture/CQRS.md) — CQRS read models are eventually consistent with the write model; the consistency gap is the same as replication lag

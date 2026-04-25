@@ -55,3 +55,4 @@ Sagas are **not atomic** in the traditional sense — other transactions can obs
 - [Sharding](../Databases/Sharding.md) — distributed transactions become necessary when data is sharded across nodes
 - [Logical Clocks](Logical%20Clocks.md) — ordering events across transaction participants is a core requirement; Spanner uses physical clock bounds; others use logical timestamps
 - [Delivery Semantics](../Messaging/Delivery%20Semantics.md) — exactly-once message processing is related; sagas in message-driven systems rely on idempotent handlers and at-least-once delivery
+- [Saga Pattern](Saga%20Pattern.md) — the primary alternative to 2PC for multi-service atomicity; trades ACID isolation for availability and service autonomy

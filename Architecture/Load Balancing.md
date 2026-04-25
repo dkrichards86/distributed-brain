@@ -52,3 +52,7 @@ In multi-zone or multi-region deployments, routing to the nearest healthy backen
 - [Failure Detection](../Fault%20Tolerance/Failure%20Detection.md) — load balancer health checks are a form of failure detection; the same accuracy/latency tradeoff applies
 - [Rate Limiting](../Engineering/Rate%20Limiting.md) — load balancing distributes traffic across backends; rate limiting caps total traffic entering the system; they're complementary
 - [Service Discovery](Service%20Discovery.md) — service discovery provides the pool of healthy endpoints that the load balancer selects from; the two concerns are usually co-located in a proxy like Envoy
+- [API Gateway](API%20Gateway.md) — the gateway sits in front of the load balancer for north-south traffic, applying auth and routing before load balancing to backend instances
+- [Health Checks](../Observability/Health%20Checks.md) — load balancers use active health checks to remove unhealthy backends from the pool; readiness probes gate inclusion in rotation
+- [Blue-Green and Canary Deployments](Blue-Green%20and%20Canary%20Deployments.md) — traffic shifting between versions is implemented at the load balancer via weighted routing
+- [Horizontal and Vertical Scaling](Horizontal%20and%20Vertical%20Scaling.md) — horizontal scaling adds more instances to the load balancer pool; the load balancer is what makes the pool appear as a single service

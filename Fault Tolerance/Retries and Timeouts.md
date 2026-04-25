@@ -68,3 +68,5 @@ Mitigations:
 - [Thundering Herd](../Performance/Thundering%20Herd.md) — synchronized retries are a form of thundering herd; the same problem, triggered by failure rather than cache expiry
 - [Delivery Semantics](../Messaging/Delivery%20Semantics.md) — retries in messaging systems are the mechanism behind at-least-once delivery; idempotency is the consumer-side contract that makes retries safe
 - [Service Mesh](../Architecture/Service%20Mesh.md) — service meshes apply retry and timeout policies at the proxy level, consistently across all services, without application code changes
+- [Idempotency](../Engineering/Idempotency.md) — the server-side property that makes retries safe; non-idempotent operations require idempotency keys to prevent duplicate side effects
+- [Saga Pattern](../Distributed%20Systems/Saga%20Pattern.md) — saga orchestrators retry failed steps before triggering compensation; retry budgets prevent infinite retry loops across a multi-service workflow

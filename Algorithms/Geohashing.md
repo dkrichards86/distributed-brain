@@ -24,6 +24,3 @@ Precision scales with string length:
 - **Less precise than raw lat/lon** — precision is quantized to the cell size at a given string length, not exact coordinates.
 - **Z-curve discontinuities** — the Z-order curve has jumps, so a shared prefix doesn't guarantee the two points are the closest possible pair within that prefix.
 
-## Related concepts
-
-- [Linear Referencing](Linear%20Referencing.md) — an alternative location encoding for positions along a fixed route, using scalar distance rather than a grid hash

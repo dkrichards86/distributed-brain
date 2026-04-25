@@ -48,3 +48,4 @@ mTLS can be implemented directly in application code or via a sidecar without a 
 - [Service Mesh](Service%20Mesh.md) — service meshes automate mTLS across the entire cluster; the control plane handles certificate issuance and rotation, the sidecar handles termination
 - [Sidecar](Sidecar.md) — the sidecar terminates mTLS connections so the application doesn't need to implement TLS directly
 - [One-Time Passwords](../Engineering/One-Time%20Passwords.md) — a different authentication mechanism; mTLS authenticates services via certificates, OTPs authenticate humans via time-bounded codes
+- [API Gateway](API%20Gateway.md) — the gateway may terminate external TLS and re-establish mTLS to backend services, or enforce mTLS between clients and the gateway itself

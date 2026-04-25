@@ -49,3 +49,5 @@ Rather than paying the cost of exactly-once infrastructure, most systems impleme
 
 - [Pub-Sub Patterns](Pub-Sub%20Patterns.md) — the delivery semantic is a property of the pub-sub broker configuration; consumers are designed around it
 - [Distributed Transactions](../Distributed%20Systems/Distributed%20Transactions.md) — exactly-once processing often relies on transactional semantics (atomic offset commit + state update) which is a form of distributed transaction
+- [Idempotency](../Engineering/Idempotency.md) — the practical alternative to exactly-once infrastructure; at-least-once delivery is safe when consumers are idempotent
+- [Saga Pattern](../Distributed%20Systems/Saga%20Pattern.md) — choreographed sagas rely on at-least-once delivery between services; each step handler must be idempotent

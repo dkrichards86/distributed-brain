@@ -48,3 +48,8 @@ Excessive microtasks can starve the Poll phase. If a chain of resolved Promises 
 - **`setImmediate()` vs. `setTimeout(0)`** — `setImmediate` is guaranteed to run in the Check phase after I/O; `setTimeout(0)` runs in Timers which may fire before or after I/O depending on system load
 - **Single-threaded CPU work** — any synchronous CPU-intensive operation blocks the entire loop; Node is not suited for CPU-bound work without worker threads
 
+## Related
+
+- [Futures and Promises](Futures%20and%20Promises.md) — Promises are microtasks in Node; which queue they land in determines execution order relative to I/O
+- [Goroutines](Goroutines.md) — contrast: goroutines multiplex across OS threads for true parallelism; the event loop achieves concurrency on a single thread via async I/O
+

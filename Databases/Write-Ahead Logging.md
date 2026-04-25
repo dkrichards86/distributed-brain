@@ -47,3 +47,4 @@ Flushing the WAL (fsync) for every single transaction would serialize all writer
 - [Relational Databases](Relational%20Databases.md) — Postgres and MySQL both use WAL for transaction durability
 - [LSM Trees](LSM%20Trees.md) — also use a WAL to make MemTable writes durable before the flush to SSTable
 - [Replication](Replication.md) — Postgres streaming replication works by shipping WAL records to replicas
+- [Event Sourcing](../Architecture/Event%20Sourcing.md) — applies the same append-only log principle at the application domain level; the event log is to the application what the WAL is to the database

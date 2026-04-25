@@ -54,3 +54,4 @@ SWIM's key insight: detection work is spread across all nodes (no central monito
 - [Gossip Protocols](../Distributed%20Systems/Gossip%20Protocols.md) — SWIM uses gossip for disseminating failure suspicions across the cluster
 - [Circuit Breaker](Circuit%20Breaker.md) — failure detection at the service-call level; the breaker opens when a downstream looks like it's failing, rather than waiting for node-level detection
 - [Service Discovery](../Architecture/Service%20Discovery.md) — service registries use health checks to detect failed instances and remove them from the endpoint pool; the same detection latency tradeoffs apply
+- [Health Checks](../Observability/Health%20Checks.md) — infrastructure-level failure detection via periodic probes; liveness and readiness checks inform orchestrators and load balancers rather than peer nodes

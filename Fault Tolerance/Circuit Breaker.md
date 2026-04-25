@@ -37,3 +37,4 @@ Implemented by Hystrix (Netflix, now in maintenance), Resilience4j, Polly, and a
 - [Failure Detection](Failure%20Detection.md) — circuit breakers detect failure at the service-call level; heartbeats and phi accrual detect it at the node level
 - [Chaos Engineering](Chaos%20Engineering.md) — chaos experiments deliberately trigger conditions that should open the breaker to verify it works correctly under real load
 - [Service Mesh](../Architecture/Service%20Mesh.md) — service meshes implement circuit breaking in the sidecar proxy, removing the need to implement it in application code
+- [Health Checks](../Observability/Health%20Checks.md) — health checks detect instance-level failure; circuit breakers detect call-level failure; together they cover failure at both granularities

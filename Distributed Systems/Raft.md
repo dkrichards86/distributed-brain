@@ -67,3 +67,5 @@ Adding or removing nodes naively can create two independent majorities during th
 - [Logical Clocks](Logical%20Clocks.md) — terms are a form of logical epoch/clock; they establish a total ordering of leadership periods and ensure stale leaders are recognized as such
 - [CAP Theorem](CAP%20Theorem.md) — Raft is a CP system; the minority partition stalls rather than serving potentially inconsistent data
 - [Service Discovery](../Architecture/Service%20Discovery.md) — etcd and Consul use Raft to replicate their service registry state; this is why they can be trusted as a source of truth for cluster membership
+- [Quorum](Quorum.md) — Raft commits entries when a quorum (majority) of nodes acknowledge them; elections require a quorum of votes; the quorum is what bounds fault tolerance to ⌊N/2⌋ failures
+- [Distributed Lock](Distributed%20Lock.md) — etcd (Raft-backed) is a common implementation substrate for distributed locks; linearizable writes to etcd guarantee exclusive access

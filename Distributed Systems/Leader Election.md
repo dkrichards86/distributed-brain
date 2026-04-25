@@ -50,3 +50,5 @@ Reduces coordination overhead but requires clock bounds — the leader must rele
 - [Failure Detection](../Fault%20Tolerance/Failure%20Detection.md) — election is triggered by failure detection; the accuracy of failure detection determines how quickly re-election happens and how often false elections fire
 - [Replication](../Databases/Replication.md) — leader-follower replication requires leader election on failover; the new leader must have all committed log entries
 - [CAP Theorem](CAP%20Theorem.md) — election protocols are CP: the system pauses writes during an election to avoid split-brain
+- [Quorum](Quorum.md) — leader election requires a quorum of votes to prevent split-brain; no candidate can win without a majority
+- [Distributed Lock](Distributed%20Lock.md) — leader election is a special case of a distributed lock; the "leader" is the holder of the lock, renewed via heartbeats or lease extensions

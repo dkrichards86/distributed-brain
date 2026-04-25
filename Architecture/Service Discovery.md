@@ -63,3 +63,4 @@ The registry removes instances from the pool when they fail. Three health check 
 - [Gossip Protocols](../Distributed%20Systems/Gossip%20Protocols.md) — Consul uses gossip (via Serf) to propagate node join/leave events across the registry cluster
 - [Failure Detection](../Fault%20Tolerance/Failure%20Detection.md) — registries use health checks to detect failed instances; the same detection latency tradeoffs apply
 - [gRPC](../Serialization%20%26%20RPC/gRPC.md) — gRPC has a pluggable name resolver interface that integrates with service registries; it supports xDS natively for Envoy-based service discovery
+- [Health Checks](../Observability/Health%20Checks.md) — service registries perform health checks (HTTP probes, TTL heartbeats) to determine which instances to include in the endpoint pool

@@ -45,3 +45,8 @@ else: reject
 - **Distributed vs. local enforcement** — Redis-backed rate limiting is accurate across replicas but adds latency per request; local in-process limiting is fast but each instance enforces independently, allowing N× the intended rate across N replicas
 - **Proactive vs. reactive** — rate limiting is proactive (per-client ceiling before a problem develops); [Load Shedding](Load%20Shedding.md) is reactive (system-wide when already under stress); both are needed
 - **Fairness vs. priority** — uniform per-client limits are fair but don't distinguish high-value traffic from low-value traffic; tiered limits (paid vs. free) add complexity but better reflect business value
+
+## Related concepts
+
+- [API Gateway](../Architecture/API%20Gateway.md) — the gateway is the natural enforcement point for rate limiting; per-client quotas are applied at the entry point before requests reach backends
+- [Load Shedding](Load%20Shedding.md) — rate limiting is proactive (per-client ceiling set in advance); load shedding is reactive (system-wide when already under stress); both are needed
