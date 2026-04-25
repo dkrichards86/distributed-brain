@@ -21,6 +21,10 @@ A personal knowledge base for distributed systems concepts. Notes are plain mark
 
 When adding a new note, place it in the most fitting directory above. If no directory fits, create a new one and add it to this table.
 
+## Knowledge graph
+
+![Knowledge graph](graph.png)
+
 ## What's here
 
 Notes on distributed computing topics. Each note follows a fixed structure — what the concept is, why it matters, how it works, and key tradeoffs.
